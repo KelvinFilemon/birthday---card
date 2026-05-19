@@ -1,0 +1,336 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Patrick Hand', cursive;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+html, body{
+    width:100%;
+    min-height:100%;
+    overflow-x:hidden;
+    overflow-y:auto;
+}
+
+body{
+    background:linear-gradient(
+        135deg,
+        #fff7fb,
+        #ffeef5,
+        #fffdf7
+    );
+
+    position:relative;
+}
+
+/* smooth */
+
+*{
+    transition:all 0.35s ease;
+}
+
+/* pages */
+
+.page{
+    width:100%;
+    min-height:100vh;
+
+    display:none;
+    justify-content:center;
+    align-items:center;
+
+    padding:20px;
+
+    animation:pageIn 0.7s ease;
+}
+
+.page.active{
+    display:flex;
+}
+
+@keyframes pageIn{
+
+    from{
+        opacity:0;
+        transform:
+        translateY(40px)
+        scale(0.95);
+    }
+
+    to{
+        opacity:1;
+        transform:
+        translateY(0px)
+        scale(1);
+    }
+}
+
+/* floating stars */
+
+.star{
+    position:absolute;
+
+    animation:
+    float 5s ease-in-out infinite,
+    glow 2s ease-in-out infinite alternate;
+
+    z-index:0;
+}
+
+@keyframes float{
+
+    0%,100%{
+        transform:translateY(0px);
+    }
+
+    50%{
+        transform:translateY(-15px);
+    }
+}
+
+@keyframes glow{
+
+    from{
+        opacity:0.5;
+    }
+
+    to{
+        opacity:1;
+    }
+}
+
+/* glass */
+
+.content,
+.letter,
+.final{
+
+    backdrop-filter:blur(14px);
+
+    background:rgba(255,255,255,0.35);
+
+    border:1px solid rgba(255,255,255,0.4);
+
+    box-shadow:
+    0 8px 30px rgba(0,0,0,0.08);
+
+    border-radius:30px;
+
+    animation:wiggle 5s ease-in-out infinite;
+}
+
+@keyframes wiggle{
+
+    0%,100%{
+        transform:rotate(0deg);
+    }
+
+    25%{
+        transform:rotate(1deg);
+    }
+
+    75%{
+        transform:rotate(-1deg);
+    }
+}
+
+/* content */
+
+.content{
+    width:90%;
+    max-width:500px;
+
+    padding:45px;
+
+    text-align:center;
+
+    z-index:2;
+}
+
+.content h1{
+    font-size:50px;
+    color:#444;
+
+    line-height:1.2;
+
+    margin-bottom:20px;
+
+    transform:rotate(-3deg);
+}
+
+/* buttons */
+
+.buttons{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+
+    margin-bottom:25px;
+}
+
+button{
+    border:none;
+
+    padding:12px 24px;
+
+    border-radius:50px;
+
+    font-size:20px;
+
+    cursor:pointer;
+
+    background:white;
+
+    box-shadow:
+    0 5px 15px rgba(0,0,0,0.08);
+}
+
+button:hover{
+    transform:
+    translateY(-4px)
+    scale(1.05);
+}
+
+/* image */
+
+.miffy{
+    width:170px;
+
+    animation:bounce 2.5s infinite ease-in-out;
+}
+
+@keyframes bounce{
+
+    0%,100%{
+        transform:translateY(0px);
+    }
+
+    50%{
+        transform:translateY(-12px);
+    }
+}
+
+/* letter */
+
+.letter{
+    width:90%;
+    max-width:550px;
+
+    padding:45px;
+
+    text-align:center;
+
+    max-height:85vh;
+    overflow-y:auto;
+}
+
+.letter h2{
+    font-size:55px;
+
+    margin-bottom:20px;
+
+    color:#ff5c8a;
+}
+
+.letter p{
+    font-size:25px;
+
+    line-height:1.6;
+
+    color:#444;
+
+    margin-bottom:25px;
+}
+
+/* final */
+
+.final{
+    width:90%;
+    max-width:500px;
+
+    padding:45px;
+
+    text-align:center;
+}
+
+.final h1{
+    font-size:65px;
+
+    color:#ff5c8a;
+
+    margin-bottom:10px;
+}
+
+.final p{
+    font-size:28px;
+
+    color:#555;
+}
+
+.gif{
+    width:220px;
+
+    margin-top:20px;
+
+    animation:bounce 2s infinite ease-in-out;
+}
+
+/* text */
+
+.small-text{
+    font-size:22px;
+    margin-bottom:20px;
+    color:#666;
+}
+
+/* mobile */
+
+@media screen and (max-width:768px){
+
+    .content,
+    .letter,
+    .final{
+        padding:30px;
+    }
+
+    .content h1{
+        font-size:35px;
+    }
+
+    .buttons{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    button{
+        width:180px;
+    }
+
+    .miffy{
+        width:130px;
+    }
+
+    .letter h2{
+        font-size:40px;
+    }
+
+    .letter p{
+        font-size:20px;
+    }
+
+    .final h1{
+        font-size:45px;
+    }
+
+    .final p{
+        font-size:22px;
+    }
+
+    .gif{
+        width:170px;
+    }
+}

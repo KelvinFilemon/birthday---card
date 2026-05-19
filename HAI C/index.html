@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Birthday Card</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- PAGE 1 -->
+<section class="page active" id="page1">
+
+  <div class="content">
+
+    <h1>
+      i have some little surprise <br>
+      wanna see?
+    </h1>
+
+    <div class="buttons">
+      <button onclick="nextPage()">yes!!</button>
+      <button id="noBtn">no thanks.</button>
+    </div>
+
+    <img src="kucing.png" class="miffy">
+
+  </div>
+
+</section>
+
+<!-- MUSIC PAGE -->
+<section class="page" id="musicPage">
+
+  <div class="content">
+
+    <h1>
+      before we continue...
+    </h1>
+    <img
+      src="vow.jpeg"
+      class="jpeg"
+    >
+
+    <p class="small-text">
+      play this song first okayyy
+      <br><br>
+      INI LAGU BAGUS WOYYY
+    </p>
+
+    <button onclick="startExperience()">
+      play music 
+    </button>
+
+  </div>
+
+</section>
+
+<!-- PAGE 2 -->
+<section class="page" id="page2">
+
+  <div class="letter">
+
+    <h2>HAPPY BIRTHDAY!!!🎂</h2>
+
+    <p>
+      hellow chen! <br><br>
+
+      happy birthday yaaa 🌷
+      i hope today feels softer,
+      warmer, and kinder for u.
+
+      <br><br>
+
+      walau u kemarin bilang,
+      “hidup gw horror”,
+      but honestly,
+      u handle things better than u think.
+
+      <br><br>
+
+      thank u udah survive sejauh ini,
+      bahkan di hari yang berat,
+      yg maybe nobody knows about.
+
+      <br><br>
+
+      please remember this:
+      "u deserve love,
+      happiness,
+      soft days,
+      and people who truly care about u."
+
+      <br><br>
+
+      and btw...
+      seeing u smile
+      is literally one of my favorite things. :>
+
+      <br><br>
+
+      jadi jangan lupa nikmatin hari ini yaa 🫶
+      semoga tahun ini banyak hal baik yang dateng ke u 
+    </p>
+
+    <button onclick="nextLetter()">
+      next 
+    </button>
+
+  </div>
+
+</section>
+
+<!-- PAGE 3 -->
+<section class="page" id="page3">
+
+  <div class="letter">
+
+    <h2>for u </h2>
+
+    <p>
+      thank u for being here until now.
+      <br><br>
+
+      i know things are not always easy,
+      but im really proud of u 🌷
+
+      <br><br>
+
+      please stay alive and keep smiling okay?
+
+      <br><br>
+
+      no matter what happens,
+      i hope u always remember
+      that u are loved more than u think 💖
+    </p>
+
+    <button onclick="showFinal()">
+      last page ✨
+    </button>
+
+  </div>
+
+</section>
+
+<!-- PAGE 4 -->
+<section class="page" id="page4">
+
+  <div class="final">
+
+    <h1>HAPPY BIRTHDAY! 🎂</h1>
+    <img
+      src="ccc.jpeg"
+      class="jpeg"
+    >
+    <p>
+        i gapunya foto u, 
+        <br>
+        jadi i ambil ini dari highlighT ig u, SORRY YAHAHAHA
+        <br>
+        masih banyak tempat yang pengen gue datengin,
+        <br>
+        selain nonton some movie at xxi HAHA,
+       <br>
+        jadi jangan ilang dulu ya, 
+    <br><br>
+        i still need a partner buat explore itu semua :p
+    </p>
+
+   
+
+  </div>
+
+</section>
+
+<!-- AUDIO -->
+<audio id="bgMusic" loop>
+  <source src="music.mp3" type="audio/mp3">
+</audio>
+
+<script src="script.js"></script>
+
+</body>
+</html>
